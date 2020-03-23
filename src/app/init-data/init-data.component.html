@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <label>AR: </label>
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)] = "aliveRatio">
+  </div>
+
+  <div class="row">
+    <label>Born if: </label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)] = "bornIf">
+  </div>
+
+  <div class="row">
+    <label>Stable if: </label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)] = "stableIf">
+  </div>
+
+  <div class="row">
+    <label>Dead if: </label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)] = "deadIf">
+  </div>
+
+  <div class="row">
+    <button
+      class="btn btn-primary"
+      (click)="sendInitData()"
+      [disabled]="!isCorrectInitData()"
+    >Save</button>
+  </div>
+</div>
+
